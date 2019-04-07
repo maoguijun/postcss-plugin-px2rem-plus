@@ -1,12 +1,13 @@
-# postcss-plugin-px2rem
+# postcss-plugin-px2rem-plus
 
-[![NPM version](https://img.shields.io/npm/v/postcss-plugin-px2rem.svg?style=flat)](https://npmjs.org/package/postcss-plugin-px2rem)
-[![Build Status](https://img.shields.io/travis/ant-tool/postcss-plugin-px2rem.svg?style=flat)](https://travis-ci.org/ant-tool/postcss-plugin-px2rem)
-[![Coverage Status](https://img.shields.io/coveralls/ant-tool/postcss-plugin-px2rem.svg?style=flat)](https://coveralls.io/r/ant-tool/postcss-plugin-px2rem)
-[![NPM downloads](http://img.shields.io/npm/dm/postcss-plugin-px2rem.svg?style=flat)](https://npmjs.org/package/postcss-plugin-px2rem)
-[![Dependency Status](https://david-dm.org/ant-tool/postcss-plugin-px2rem.svg)](https://david-dm.org/ant-tool/postcss-plugin-px2rem)
+[![NPM version](https://img.shields.io/npm/v/postcss-plugin-px2rem-plus.svg)](https://npmjs.org/package/postcss-plugin-px2rem-plus)
+[![NPM downloads](https://img.shields.io/npm/dt/postcss-plugin-px2rem-plus.svg)](https://npmjs.org/package/postcss-plugin-px2rem-plus)
+[![NPM collaborators](https://img.shields.io/npm/collaborators/postcss-plugin-px2rem-plus.svg)](https://npmjs.org/package/postcss-plugin-px2rem-plus)
+[![NPM license](https://img.shields.io/npm/l/postcss-plugin-px2rem-plus.svg)](https://npmjs.org/package/postcss-plugin-px2rem-plus)
+[![Dependency Status](https://david-dm.org/maoguijun/postcss-plugin-px2rem-plus.svg)](https://david-dm.org/maoguijun/postcss-plugin-px2rem-plus)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/postcss-plugin-px2rem-plus/0.8.2.svg)](https://david-dm.org/maoguijun/postcss-plugin-px2rem-plus)
 
-postcss plugin px2rem.
+postcss plugin px2rem-plus.
 
 <img align="right" width="135" height="95"
      title="Philosopher’s stone, logo of PostCSS"
@@ -19,7 +20,7 @@ A plugin for PostCSS that generates rem units from pixel units.
 ## Installation
 
 ```bash
-$ npm i --save postcss-plugin-px2rem
+$ npm i --save postcss-plugin-px2rem-plus
 ```
 
 ## Usage
@@ -49,7 +50,7 @@ h1 {
 ```javascript
 import { writeFile, readFileSync } from "fs";
 import postcss from "postcss";
-import pxtorem from "postcss-plugin-px2rem";
+import pxtorem from "postcss-plugin-px2rem-plus";
 
 const css = readFileSync("/path/to/test.css", "utf8");
 const options = {
@@ -66,7 +67,7 @@ writeFile("/path/to/test.rem.css", processedCss, err => {
 ### with webpack
 
 ```javascript
-import px2rem from 'postcss-plugin-px2rem';
+import px2rem from 'postcss-plugin-px2rem-plus';
 const px2remOpts = {
   ......
 };
@@ -84,13 +85,13 @@ export default {
 }
 ```
 
-### with [atool-build](https://github.com/ant-tool/atool-build)
+### with [atool-build](https://github.com/maoguijun/atool-build)
 
 `webpack.connfig.js`
 
 ```javascript
 import webpack from 'atool-build/lib/webpack';
-import px2rem from 'postcss-plugin-px2rem';
+import px2rem from 'postcss-plugin-px2rem-plus';
 
 export default webpackConfig => {
   const px2remOpts = {
